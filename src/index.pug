@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        link(rel="stylesheet", href="./style.css")
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        script(defer src="./index.js")
+        - const months = [1,2,3,4,5,6,7,'August', 'September']
+        title Pictures #{months[new Date().getMonth()]} #{new Date().getDate()}
+    body
+        section.section
+            for picture in [...Array(10).keys()]
+                .picture
+                    picture.picture_srcset
+                        source(media='(min-width: 650px)', srcset='../img/picture-' + picture + '-lrg.jpg')
+                        source(media='(min-width: 651px)', srcset='../img/picture-' + picture + '-sml.jpg')
+                        img.picture_img(src='picture-' + picture + '-sml.jpg', alt="Picture " + picture)
+                    h3.picture_h3 Picture #{picture}
+                    p.picture_p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus perferendis hic cumque itaque quod officiis, nemo autem deserunt amet ad labore at alias maiores molestias, laboriosam est delectus reprehenderit accusantium! Hic repellat dolorem, ducimus dicta pariatur adipisci sequi nisi fuga quod possimus a recusandae quisquam ratione ipsa sed nam magni.
+            .backdrop
+        
+
